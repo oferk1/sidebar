@@ -6,6 +6,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 	res.set({"Access-Control-Allow-Origin": "*", "Content-Type": "application/json"});
 	res.set({"Access-Control-Allow-Methods": "GET,PUT,POST,DELETE", "Content-Type": "application/json"});
+	res.set('Access-Control-Allow-Headers', 'Content-Type');
+
 	res.json(sidebar);
 });
 
